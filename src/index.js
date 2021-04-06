@@ -1,4 +1,4 @@
-import "./style.scss";
+
 import { owm } from "./owm.js";
 import { dom } from "./dom.js";
 

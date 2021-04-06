@@ -1,15 +1,15 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: ['@babe/polyfill', './src/index.js'],
+    entry: ['@babel/polyfill', './src/index.js'],
     devtool: 'inline-source-map',
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Development',
-        }),
-    ],
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         title: 'Development',
+    //     }),
+    // ],
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),

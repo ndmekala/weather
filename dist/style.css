@@ -101,6 +101,14 @@ input {
   font-size: 1.5rem;
 }
 
+/* loading image */
+
+.loading {
+  display: none;
+  width: 100%;
+  margin-top: 1rem;
+}
+
 /* search bar and unit toggle */
 
 .controls {

@@ -13,26 +13,37 @@ window.onload = function () {
   const searchForm = document.getElementById("searchForm");
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    document.querySelector('.loading').style.display = "inline"
     const query = document.getElementById("query").value;
     let units;
     dom.pageFarenheit() ? (units = "imperial") : (units = "metric");
-    owm.pullData(query, units).then((response) => dom.updatePage(response));
-    dom.setUnits(units);
+    owm.pullData(query, units).then((response) => {
+      dom.updatePage(response);
+      dom.setUnits(units)
+      document.querySelector('.loading').style.display = "none"
+    });
   });
 
   const unitSlider = document.querySelector(".slider");
   unitSlider.addEventListener("click", () => {
+    document.querySelector('.loading').style.display = "inline"
     const location = document.getElementById("location");
     if (dom.pageFarenheit()) {
       owm
         .pullData(location.textContent, "metric")
-        .then((response) => dom.updatePage(response));
-      dom.setUnits("metric");
+        .then((response) => {
+          dom.updatePage(response);
+          dom.setUnits("metric");
+          document.querySelector('.loading').style.display = "none"
+        });
     } else {
       owm
         .pullData(location.textContent, "imperial")
-        .then((response) => dom.updatePage(response));
-      dom.setUnits("imperial");
+        .then((response) => {
+          dom.updatePage(response);
+          dom.setUnits("imperial");
+          document.querySelector('.loading').style.display = "none"
+        });
     }
   });
 };

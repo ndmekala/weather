@@ -28,10 +28,10 @@ var dom = (function () {
             const icon = document.getElementById('icon');
             weather.textContent = json.weather[0].main;
             icon.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
-            if (json.weather[0].icon) {
-
+            if (json.weather[0].icon.includes('n')) {
+                document.documentElement.setAttribute('data-theme', 'dark');
             } else {
-
+                document.documentElement.setAttribute('data-theme', 'none');
             }
             location.textContent = json.name;
             temp.textContent = Math.round(json.main.temp);

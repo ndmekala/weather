@@ -34,15 +34,9 @@ var owm = (function () {
         }
       } catch (error) {
         const errorMsg = document.querySelector(".error-msg");
-        errorMsg.style.display = "inline";
+        errorMsg.style.display = "block";
       }
     },
-    testModule: function () {
-      console.log("yipee");
-    },
-    // test: function() {
-    //     console.log('hey')
-    // },
   };
 })();
 

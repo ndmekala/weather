@@ -61,7 +61,7 @@ p {
   background-color: var(--white);
   width: 6.25rem;
   height: 6.25rem;
-  border-radius: 3.125rem;
+  border-radius: 2rem;
 }
 
 .temp-display {

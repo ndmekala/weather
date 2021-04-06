@@ -26,9 +26,13 @@ var dom = (function () {
             const temp = document.getElementById('temp');
             const feels = document.getElementById('feels');
             const icon = document.getElementById('icon');
-            console.table(json);
             weather.textContent = json.weather[0].main;
             icon.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
+            if (json.weather[0].icon) {
+
+            } else {
+
+            }
             location.textContent = json.name;
             temp.textContent = Math.round(json.main.temp);
             feels.textContent = Math.round(json.main.feels_like);

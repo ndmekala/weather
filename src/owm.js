@@ -19,7 +19,7 @@ var owm = (function () {
             const weatherData = await response.json();
             return weatherData;
           }
-        // other queries
+          // other queries
         } else {
           const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=e5842a3af074416871539c6f51af8b1a&units=${unit}`,
@@ -37,7 +37,7 @@ var owm = (function () {
       } catch (error) {
         const errorMsg = document.querySelector(".error-msg");
         errorMsg.style.display = "block";
-        document.querySelector('.loading').style.display = "none"
+        document.querySelector(".loading").style.display = "none";
       }
     },
   };

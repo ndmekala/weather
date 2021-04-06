@@ -105,8 +105,12 @@ input {
 
 .loading {
   display: none;
+  background-image: url('https://i.stack.imgur.com/kOnzy.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 6.25rem 6.25rem;
   width: 100%;
-  height: auto;
+  height: 6.25rem;
   margin-top: 1rem;
 }
 

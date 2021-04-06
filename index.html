@@ -8,23 +8,39 @@
 </head>
 
 <body>
-    <h1 id="location"></h1>
-    <p>Temp: <span id="temp"></span> °<span class="unit">F</span></p>
-    <p>Feels Like: <span id="feels"></span> °<span class="unit">F</span></p>
-    <p>Conditions: <span id="weather"></span></p>
-    <img id="icon">
-    <form id="searchForm">
-      <input type="text" name="query" id="query">
-      <button>Submit</button>
-    </form>
-    <span class='error-msg'>Invalid input!</span>
+    <div class="sitewrapper">
+        <div class="wrapper">
+            <div class="temp-and-image">
+                
+                <div class="image">
+                    <img id="icon">
+                </div>
+                <div class='temp-display'><span id="temp"></span>°<span class="unit">F</span></div>
+            </div>
+            <h1 id="location"></h1>
+            <p class="details"><span id="feels"></span>°<span class="unit">F</span> | <span id="weather"></span></p>
+            <div class="controls">
+                <div class="search-bar">
+                    <form id="searchForm">
+                        <input type="text" name="query" id="query">
+                        <button>Submit</button>
+                    </form>
+                
+                  <span class='error-msg'>Invalid input!</span>
+                </div>
+                <div class="unit-control">
+                    <div class="unit-selector farenheit">F</div>
+                    <div class="unit-switch">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class='unit-selector celsius'>C</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
-    <span>F</span>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
-    <span>C</span>
-
 </body>
 </html>

@@ -48,6 +48,7 @@ button {
   border: 0px solid black;
   cursor: pointer;
   margin-left: 0.375rem;
+  outline: none;
 }
 
 input {
@@ -59,6 +60,7 @@ input {
   border: 0.0625rem solid var(--font-color);
   margin: 0 0 0.625rem 0;
   background-color: var(--secondary-background-color);
+  outline: none;
 }
 
 /* wrappers */

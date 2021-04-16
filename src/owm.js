@@ -11,7 +11,7 @@ var owm = (function () {
             `https://api.openweathermap.org/data/2.5/weather?zip=${q}&appid=e5842a3af074416871539c6f51af8b1a&units=${unit}`,
             { mode: "cors" }
           );
-          if (response.status === 404) {
+          if (response.status === 404 || response.status === 400) {
             throw new Error("bad input");
           } else {
             const errorMsg = document.querySelector(".error-msg");
@@ -25,7 +25,7 @@ var owm = (function () {
             `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=e5842a3af074416871539c6f51af8b1a&units=${unit}`,
             { mode: "cors" }
           );
-          if (response.status === 404) {
+          if (response.status === 404 || response.status === 400) {
             throw new Error("bad input");
           } else {
             const errorMsg = document.querySelector(".error-msg");

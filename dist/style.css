@@ -28,6 +28,15 @@ body {
   font-size: 0.875rem;
 }
 
+a, a:visited {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
 h1 {
   color: var(--accent-color);
   font-weight: normal;
@@ -73,7 +82,7 @@ input {
 }
 
 .wrapper {
-  width: 23.125rem;
+  width: 20rem;
   position: absolute;
   height: 60vh;
   margin: 6.25rem 0 0 0;
@@ -119,6 +128,13 @@ input {
 }
 
 /* search bar and unit toggle */
+
+.footer {
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+  width: 100%;
+  text-align: center;
+}
 
 .controls {
   position: absolute;
